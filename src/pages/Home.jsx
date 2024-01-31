@@ -18,7 +18,7 @@ return <Alert type="danger">{error.toString()}</Alert>
     }
     
     return <>
-        <h1>Mon Blog</h1>
+        <h1 className="mb-3">Mon Blog</h1>
            <div className="row gap-4">
             {data.map((post) => (<div key={post.id} className="col-12 col-md-4">
                 <Card 

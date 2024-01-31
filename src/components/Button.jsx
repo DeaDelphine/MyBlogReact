@@ -1,4 +1,4 @@
-export function Button({ variant, ...props }) {
+export function Button({ variant = 'primary', ...props }) {
     const newProps = {
         ...props, 
         className: `btn btn-${variant}`

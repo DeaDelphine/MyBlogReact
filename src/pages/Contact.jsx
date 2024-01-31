@@ -1,3 +1,9 @@
+import { Input } from "../components/Input";
+
 export function Contact() {
-    return 'Contact'
+    return <>
+        <form action="">
+            <Input />
+        </form>
+    </>
 }

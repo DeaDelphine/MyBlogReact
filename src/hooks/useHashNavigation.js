@@ -7,9 +7,9 @@ export function useHashNavigation() {
         const handleHashChange = () => {
             setHash(location.hash)
         }
-        window.addEventListener("hashchange", handleHashChange)
+        window.addEventListener('hashchange', handleHashChange)
             return () => {
-                window.removeEventListener("hashchange", handleHashChange)
+                window.removeEventListener('hashchange', handleHashChange)
         }
     }, []);
 
