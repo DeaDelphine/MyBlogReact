@@ -4,6 +4,8 @@ import { Card } from "../components/Card"
 import { Spinner } from "../components/Spinner"
 import { useDocumentTitle } from "../hooks/useDocumentTitle"
 import { useFetch } from "../hooks/useFetch"
+import {  useTheme } from "../hooks/useTheme"
+
 
 export function Home() {
 
@@ -19,6 +21,7 @@ return <Alert type="danger">{error.toString()}</Alert>
     
     return <>
         <h1 className="mb-3">Mon Blog</h1>
+        <ThemeSwitcher />
            <div className="row gap-4">
             {data.map((post) => (<div key={post.id} className="col-12 col-md-4">
                 <Card 
@@ -29,6 +32,13 @@ return <Alert type="danger">{error.toString()}</Alert>
                     buttonlabel="Voir l'article"
                 />
             </div>))}
-        </div>
+            
+            </div>
+           
     </>
+}
+
+function ThemeSwitcher() {
+    const { toggleTheme } = useTheme()
+    return <button onClick={toggleTheme}>Changer de theme</button>
 }
